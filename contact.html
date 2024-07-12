@@ -59,7 +59,7 @@
           
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <form action="send_mail.php" method="post" class="reveal-content">
+                <form id="contact-form" class="reveal-content">
                     <div class="row">
                         <div class="col-md-7">
                             <div class="form-group">
@@ -109,6 +109,24 @@
                 </form>
             </div>
         </div>
+        
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                const whatsappNumber = '6281224657140';
+                
+                const whatsappUrl = `https://wa.me/6281224657140?text=${encodeURIComponent(
+                    `Email: ${email}\nSubject: ${subject}\nMessage: ${message}`
+                )}`;
+                
+                window.open(whatsappUrl, '_blank');
+            });
+        </script>
+        
          
        </div>
       </div>
