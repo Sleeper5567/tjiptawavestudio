@@ -8,7 +8,10 @@
   <meta content="description" name="description">
   <meta name="google" content="notranslate" />
   <meta content="Mashup templates have been developped by Orson.io team" name="author">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
   
@@ -140,25 +143,6 @@
           });
         </script>
         
-        
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
-                const whatsappNumber = '6281224657140';
-                
-                const whatsappUrl = `https://wa.me/6281224657140?text=${encodeURIComponent(
-                    `Email: ${email}\nSubject: ${subject}\nMessage: ${message}`
-                )}`;
-                
-                window.open(whatsappUrl, '_blank');
-            });
-        </script>
-        
-         
        </div>
       </div>
     </div>
