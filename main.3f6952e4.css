@@ -27,15 +27,4 @@
     transform: translate(-50%, -50%);
     background-size: cover;
 }
-
-.hero-full-container {
-    position: relative;
-    z-index: 1;
-}
-
-.white-text-container {
-    position: relative;
-    z-index: 2;
-}
-
 /*# sourceMappingURL=main.70a66962.map*/
