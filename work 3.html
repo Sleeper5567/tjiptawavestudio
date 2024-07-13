@@ -157,7 +157,22 @@
      navActivePage();
   });
 </script>
-
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('mailto:')) {
+          const linkElement = document.createElement('link');
+          linkElement.rel = 'prefetch';
+          linkElement.href = href;
+          document.head.appendChild(linkElement);
+        }
+      });
+    });
+  });
+</script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
